@@ -1,0 +1,8 @@
+<h1>新曲投稿ページ</h1>
+<!---->
+<%= form_with url: "/posts", method: :post, local: true do |form|%>
+<!--url:/"posts"は/postsパスに戻るという意味-->
+<!--method: :postはここで入力したものをデータベースに送り届けるためにroutes.rbに書いてあるHTTPメソッド（post）のこと-->
+  <%= form.text_field :content %>
+  <%= form.submit '投稿する' %>
+<% end %>
